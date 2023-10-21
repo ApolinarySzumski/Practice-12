@@ -2,26 +2,30 @@ import PropTypes from 'prop-types';
 
 const Profile = props => {
   return (
-    <div className="text-gray-200 bg-sky-900 font-mono m-10 p-10 space-y-6 flex flex-col items-center rounded-full border-solid border-8 border-orange-600">
+    <div className="text-gray-200 bg-sky-900 font-mono mb-16 p-16 space-y-6 flex flex-col items-center rounded-full border-solid border-4 border-orange-600 w-128 h-fit">
       <div className="flex flex-col gap-y-2">
-        <img src={props.avatar} alt="User avatar" className="w-40 h-fit" />
-        <p className="name">{props.username}</p>
-        <p className="tag">{props.tag}</p>
-        <p className="location">{props.location}</p>
+        <img
+          src={props.avatar}
+          alt="User avatar"
+          className="w-40 h-40 rounded-full"
+        />
+        <p>{props.username}</p>
+        <p>{props.tag}</p>
+        <p>{props.location}</p>
       </div>
 
       <ul className="flex flex-col gap-y-2">
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">: {props.stats.followers}</span>
+          <span>Followers</span>
+          <span>: {props.stats.followers}</span>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">: {props.stats.views}</span>
+          <span>Views</span>
+          <span>: {props.stats.views}</span>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">: {props.stats.likes}</span>
+          <span>Likes</span>
+          <span>: {props.stats.likes}</span>
         </li>
       </ul>
     </div>

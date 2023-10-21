@@ -9,7 +9,7 @@ import items from '../data/transactions';
 
 export const App = () => {
   return (
-    <>
+    <div className="flex flex-col items-center bg-sky-500 divide-y-2 divide-slate-800 pt-10">
       <Profile
         username={user.username}
         tag={user.tag}
@@ -17,12 +17,9 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <div>--------------------------------------------------------------</div>
       <Statictics title="Upload stats" stats={stats} />
-      <div>--------------------------------------------------------------</div>
       <FriendList friends={friends} />
-      <div>--------------------------------------------------------------</div>
       <TransactionHistory items={items} />
-    </>
+    </div>
   );
 };

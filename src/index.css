@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  tr {
+    @apply flex items-center justify-center;
+  }
+  th,
+  td {
+    @apply w-28 h-10 flex justify-center items-center;
+  }
+  th {
+    @apply border-r-2 last:border-r-0;
+  }
+  td {
+    @apply border-r-2 last:border-r-0 border-b-2;
+  }
+}
